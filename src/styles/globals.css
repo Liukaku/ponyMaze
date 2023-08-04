@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "DefautText";
+  src: url("../../public/micross.ttf");
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,11 +22,33 @@
 }
 
 body {
+  font-family: "DefautText";
   color: rgb(var(--foreground-rgb));
+  background: #008080;
+}
+
+.headerBarGrey {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    90deg,
+    #000281 0,
+    #020c88 10%,
+    #031c91 0,
+    #031c91 20%,
+    #0737a2 0,
+    #0737a2 30%,
+    #0737a2 0,
+    #0737a2 40%,
+    #0843a9 0,
+    #0843a9 50%,
+    #0a51b1 0,
+    #0a51b1 60%,
+    #0b5db8 0,
+    #0b5db8 70%,
+    #0d70c4 0,
+    #0d70c4 80%,
+    #086dc5 0,
+    #086dc5 90%,
+    #1083cf 0,
+    #1083cf
+  );
 }
