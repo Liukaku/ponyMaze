@@ -15,3 +15,12 @@ export interface GoalLocations {
   domokun: number | null;
   endPoint: number | null;
 }
+
+export interface ContructMazeProps {
+  height: number;
+  width: number;
+  walls: Cardinals[][];
+  pony: number[];
+  domokun: number[];
+  endPoint: number[];
+}

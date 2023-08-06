@@ -4,7 +4,9 @@ import { MlpChars } from "@/util/constants";
 import { MazeProps, Cardinals, GoalLocations } from "@/util/types";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import React, { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import ErrorWindow from "@/components/errorWindow";
+import { constructMaze } from "@/util/maze.utils";
 
 const Maze = () => {
   const router = useRouter();
@@ -14,14 +16,35 @@ const Maze = () => {
     ? Object.keys(MlpChars)[parseInt(ponyInt as string)]
     : "lowResRainDa";
   const [mazeRows, setMazeRows] = useState<MazeProps[][]>([]);
+  const [error, setError] = useState<string | null>(null);
   const [goals, setGoals] = useState<GoalLocations>({
     domokun: null,
     pony: null,
     endPoint: null,
   });
+
   useEffect(() => {
-    if (!mazeId) return;
+    if (mazeId == null) return;
     getMazeData(mazeId as string);
+
+    document.addEventListener("keydown", (e) => {
+      switch (e.key) {
+        case "ArrowUp":
+          movePony("north", e);
+          break;
+        case "ArrowDown":
+          movePony("south", e);
+          break;
+        case "ArrowLeft":
+          movePony("west", e);
+          break;
+        case "ArrowRight":
+          movePony("east", e);
+          break;
+        default:
+          break;
+      }
+    });
   }, [mazeId]);
 
   const getMazeData = (mazeId: string) => {
@@ -42,55 +65,49 @@ const Maze = () => {
           pony: mazeResData.pony[0],
           endPoint: mazeResData["end-point"][0],
         });
-        constructMaze(mazeProps);
+        const rows = constructMaze(mazeProps);
+        if (rows == null) {
+          setError("Error creating maze, please refresh!");
+        } else {
+          setMazeRows(rows);
+        }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        setError(
+          "Error obtaining maze, please ensure the link used was correct!"
+        );
+        console.log(err);
+      });
   };
 
-  const constructMaze = (mazeDataParam: any) => {
-    if (Object.keys(mazeDataParam).length === 0) return;
-    const rows: MazeProps[][] = [];
-
-    let id = 0;
-    const { height, width, walls, pony, domokun, endPoint } = mazeDataParam;
-
-    for (let i = 0; i < height; i++) {
-      const row: MazeProps[] = [];
-      for (let j = 0; j < width; j++) {
-        const blockData: MazeProps = {
-          key: id,
-          walls: walls[id] as Cardinals[],
-          isPony: id === pony[0] ? true : false,
-          isDomokun: id === domokun[0] ? true : false,
-          isExit: id === endPoint[0] ? true : false,
-          height: parseInt(height),
-          width: parseInt(width),
-        };
-        if (i === height - 1) {
-          blockData.walls.push("south");
+  const movePony = async (direction: string, e?: KeyboardEvent) => {
+    if (e) e.preventDefault();
+    try {
+      const move = await fetch(
+        `https://ponychallenge.trustpilot.com/pony-challenge/maze/${mazeId}`,
+        {
+          headers: { "Content-Type": "application/json" },
+          method: "POST",
+          body: JSON.stringify({ direction: direction }),
         }
-        if (j === width - 1) {
-          blockData.walls.push("east");
-        }
-
-        row.push(blockData);
-        id++;
+      );
+      const moveRes = await move.text();
+      let moveResJson;
+      try {
+        moveResJson = JSON.parse(moveRes);
+      } catch (error) {
+        throw new Error(moveRes);
       }
-      rows.push(row);
+
+      getMazeData(`${mazeId}`);
+    } catch (error) {
+      console.log(error);
+      setError("Error moving pony!");
     }
-    setMazeRows(rows);
   };
 
-  const movePony = async (direction: string) => {
-    await fetch(
-      `https://ponychallenge.trustpilot.com/pony-challenge/maze/${mazeId}`,
-      {
-        headers: { "Content-Type": "application/json" },
-        method: "POST",
-        body: JSON.stringify({ direction: direction }),
-      }
-    );
-    getMazeData(`${mazeId}`);
+  const clearError = () => {
+    setError(null);
   };
 
   const returnToSender = () => {
@@ -111,6 +128,7 @@ const Maze = () => {
           />
           <h1 className="select-none">HelpThePony.exe</h1>
         </div>
+        {error && <ErrorWindow error={error} closeHandler={clearError} />}
         {goals.pony === goals.endPoint && (
           <div className="my-3 px-3 py-1 justify-center h-auto w-[98%] mx-auto bg-black  duration-100 text-black border-2 border-t-gray-500 border-r-gray-500 border-l-gray-100 border-b-gray-100">
             <p className=" select-none pt-36 pb-10 text-center text-white">

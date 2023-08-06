@@ -1,6 +1,7 @@
 import { MazeProps } from "@/util/types";
 import Image from "next/image";
 import { assignClasses } from "./block.utils";
+import React from "react";
 
 interface BlockProps {
   data: MazeProps;

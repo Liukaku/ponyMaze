@@ -1,0 +1,200 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row tests renders a row with the given props 1`] = `
+<div
+  className="flex justify-center"
+>
+  <div
+    className="text-white bg-pink-200/80"
+    style={
+      {
+        "height": "6vmin",
+        "width": "6vmin",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="mx-auto"
+      data-nimg="1"
+      decoding="async"
+      height={50}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fponies%2FlowResTwiSp.png&w=128&q=75"
+      srcSet="/_next/image?url=%2Fponies%2FlowResTwiSp.png&w=64&q=75 1x, /_next/image?url=%2Fponies%2FlowResTwiSp.png&w=128&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={50}
+    />
+  </div>
+  <div
+    className="text-white bg-red-800/80"
+    style={
+      {
+        "height": "6vmin",
+        "width": "6vmin",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="mx-auto"
+      data-nimg="1"
+      decoding="async"
+      height={100}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fdomo.png&w=256&q=100"
+      srcSet="/_next/image?url=%2Fdomo.png&w=128&q=100 1x, /_next/image?url=%2Fdomo.png&w=256&q=100 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={100}
+    />
+  </div>
+  <div
+    className="text-white bg-yellow-200/80"
+    style={
+      {
+        "height": "6vmin",
+        "width": "6vmin",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="mx-auto"
+      data-nimg="1"
+      decoding="async"
+      height={100}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fdoor.png&w=256&q=100"
+      srcSet="/_next/image?url=%2Fdoor.png&w=128&q=100 1x, /_next/image?url=%2Fdoor.png&w=256&q=100 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={100}
+    />
+  </div>
+  <div
+    className="text-white"
+    style={
+      {
+        "height": "6vmin",
+        "width": "6vmin",
+      }
+    }
+  />
+  <div
+    className="text-white"
+    style={
+      {
+        "height": "6vmin",
+        "width": "6vmin",
+      }
+    }
+  />
+  <div
+    className="text-white"
+    style={
+      {
+        "height": "6vmin",
+        "width": "6vmin",
+      }
+    }
+  />
+  <div
+    className="text-white"
+    style={
+      {
+        "height": "6vmin",
+        "width": "6vmin",
+      }
+    }
+  />
+  <div
+    className="text-white"
+    style={
+      {
+        "height": "6vmin",
+        "width": "6vmin",
+      }
+    }
+  />
+  <div
+    className="text-white"
+    style={
+      {
+        "height": "6vmin",
+        "width": "6vmin",
+      }
+    }
+  />
+  <div
+    className="text-white"
+    style={
+      {
+        "height": "6vmin",
+        "width": "6vmin",
+      }
+    }
+  />
+  <div
+    className="text-white"
+    style={
+      {
+        "height": "6vmin",
+        "width": "6vmin",
+      }
+    }
+  />
+  <div
+    className="text-white"
+    style={
+      {
+        "height": "6vmin",
+        "width": "6vmin",
+      }
+    }
+  />
+  <div
+    className="text-white"
+    style={
+      {
+        "height": "6vmin",
+        "width": "6vmin",
+      }
+    }
+  />
+  <div
+    className="text-white"
+    style={
+      {
+        "height": "6vmin",
+        "width": "6vmin",
+      }
+    }
+  />
+  <div
+    className="text-white"
+    style={
+      {
+        "height": "6vmin",
+        "width": "6vmin",
+      }
+    }
+  />
+</div>
+`;

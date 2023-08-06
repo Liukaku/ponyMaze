@@ -9,7 +9,7 @@ export const assignClasses = (
   const classes = [`text-white`];
   const wallBorders = {
     north: "border-t-2 border-white",
-    south: "border-b-2  border-white",
+    south: "border-b-2 border-white",
     east: "border-r-2 border-white",
     west: "border-l-2 border-white",
   };

@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`charact selection snapshot test renders the character selection component 1`] = `
+<div
+  className=" grid grid-cols-2 grid-rows-3 "
+>
+  <div
+    className="py-2 cursor-pointer hover:bg-pink-100 duration-300 ease-in-out "
+    onClick={[Function]}
+  >
+    <img
+      alt=""
+      className="mx-auto "
+      data-nimg="1"
+      decoding="async"
+      height={50}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fponies%2FlowResTwiSp.png&w=128&q=75"
+      srcSet="/_next/image?url=%2Fponies%2FlowResTwiSp.png&w=64&q=75 1x, /_next/image?url=%2Fponies%2FlowResTwiSp.png&w=128&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={50}
+    />
+  </div>
+  <div
+    className="py-2 cursor-pointer hover:bg-pink-100 duration-300 ease-in-out "
+    onClick={[Function]}
+  >
+    <img
+      alt=""
+      className="mx-auto "
+      data-nimg="1"
+      decoding="async"
+      height={50}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fponies%2FlowResRainDa.png&w=128&q=75"
+      srcSet="/_next/image?url=%2Fponies%2FlowResRainDa.png&w=64&q=75 1x, /_next/image?url=%2Fponies%2FlowResRainDa.png&w=128&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={50}
+    />
+  </div>
+  <div
+    className="py-2 cursor-pointer hover:bg-pink-100 duration-300 ease-in-out "
+    onClick={[Function]}
+  >
+    <img
+      alt=""
+      className="mx-auto "
+      data-nimg="1"
+      decoding="async"
+      height={50}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fponies%2FlowResPinPi.png&w=128&q=75"
+      srcSet="/_next/image?url=%2Fponies%2FlowResPinPi.png&w=64&q=75 1x, /_next/image?url=%2Fponies%2FlowResPinPi.png&w=128&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={50}
+    />
+  </div>
+  <div
+    className="py-2 cursor-pointer hover:bg-pink-100 duration-300 ease-in-out "
+    onClick={[Function]}
+  >
+    <img
+      alt=""
+      className="mx-auto "
+      data-nimg="1"
+      decoding="async"
+      height={50}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fponies%2FlowResRari.png&w=128&q=75"
+      srcSet="/_next/image?url=%2Fponies%2FlowResRari.png&w=64&q=75 1x, /_next/image?url=%2Fponies%2FlowResRari.png&w=128&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={50}
+    />
+  </div>
+  <div
+    className="py-2 cursor-pointer hover:bg-pink-100 duration-300 ease-in-out "
+    onClick={[Function]}
+  >
+    <img
+      alt=""
+      className="mx-auto "
+      data-nimg="1"
+      decoding="async"
+      height={50}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fponies%2FlowResAppJa.png&w=128&q=75"
+      srcSet="/_next/image?url=%2Fponies%2FlowResAppJa.png&w=64&q=75 1x, /_next/image?url=%2Fponies%2FlowResAppJa.png&w=128&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={50}
+    />
+  </div>
+  <div
+    className="py-2 cursor-pointer hover:bg-pink-100 duration-300 ease-in-out "
+    onClick={[Function]}
+  >
+    <img
+      alt=""
+      className="mx-auto "
+      data-nimg="1"
+      decoding="async"
+      height={50}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fponies%2FlowFluShy.png&w=128&q=75"
+      srcSet="/_next/image?url=%2Fponies%2FlowFluShy.png&w=64&q=75 1x, /_next/image?url=%2Fponies%2FlowFluShy.png&w=128&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={50}
+    />
+  </div>
+</div>
+`;
